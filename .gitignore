@@ -1,0 +1,9 @@
+node_modules/
+wallets.json
+wallets_old.json
+.env
+data/
+wrapper.log
+mine-skill/
+awp-wallet/
+scratch/
