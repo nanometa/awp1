@@ -1,0 +1,13 @@
+services:
+  awp-farm:
+    build: .
+    container_name: fernando-farm
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./wallets.json:/app/wallets.json
+      - ./data:/app/data
+      - ./wrapper.log:/app/wrapper.log
+    mem_limit: 30g
+    mem_reservation: 8g
+    command: bash -c "node start-farm.js && tail -f /dev/null"
